@@ -35,7 +35,7 @@ public class Selenium_TestNG_14_Annotations_Test {
     public void beforeTest(){
         System.out.println("testten once BeforeTest calisti ");
     }
-    @BeforeGroups
+    @BeforeGroups (groups = "group testi")
     public void beforeGroups(){
         System.out.println("groupdan once BeforeGroups calisti ");
     }
@@ -55,7 +55,7 @@ public class Selenium_TestNG_14_Annotations_Test {
     public void afterTest(){
         System.out.println("testten sonra AfterTest calisti ");
     }
-    @AfterGroups
+    @AfterGroups (groups = "group testi")
     public void afterGroups(){
         System.out.println("groupdan sonra AfterGroups calisti ");
     }
