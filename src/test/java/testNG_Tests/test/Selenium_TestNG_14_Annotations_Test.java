@@ -1,6 +1,13 @@
 package testNG_Tests.test;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
+import testNG_Tests.utilities.ConfigReader;
+import testNG_Tests.utilities.Driver;
+
+import java.time.Duration;
+import static testNG_Tests.utilities.Driver.getDriver;
 
 public class Selenium_TestNG_14_Annotations_Test {
 
@@ -69,4 +76,6 @@ public class Selenium_TestNG_14_Annotations_Test {
     public void test2() {
         System.out.println("Test2 calisti");
     }
+
+
 }
