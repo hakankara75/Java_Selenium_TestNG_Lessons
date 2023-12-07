@@ -22,6 +22,8 @@ public class Selenium_TestNG_15_FileUpload_Waits_Exceptions_Test {
         // kullanici "https://demoqa.com/upload-download" sitesine gider
         getDriver().get(ConfigReader.getProperty("demoqaUrl"));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+
 try {
     page.dosyaSec.click();
 }catch (Exception e) {
