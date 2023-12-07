@@ -28,41 +28,38 @@ public class Selenium_TestNG_16_Faker_FileExist_Test {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         String name=faker.name().firstName();
-        WebElement firstName=getDriver().findElement(By.id("firstname"));
-        firstName.sendKeys(name);
+        page.firstName.sendKeys(name);
 
         String lastname=faker.name().lastName();
-        WebElement lastName=getDriver().findElement(By.id("last_name"));
-        lastName.sendKeys(lastname);
+        page.lastName.sendKeys(lastname);
 
-        WebElement country= getDriver().findElement(By.cssSelector("div.filter-option-inner"));
-        country.click();
+        //css tag (.) ve class value
+        //WebElement country= getDriver().findElement(By.cssSelector("div.filter-option-inner"));
+        page.country.click();
 
-        WebElement albania= getDriver().findElement(By.id("bs-select-1-2"));
-        albania.click();
+        page.albania.click();
 
         String phone=faker.phoneNumber().cellPhone();
         //faker.numerify("###-###-###-#####"); istenen formtta yazabilirsiniz.
-        WebElement phoneNumber=getDriver().findElement(By.id("phone"));
-        phoneNumber.sendKeys(phone);
+        page.phone.sendKeys(phone);
 
         String mail=faker.internet().emailAddress();
-        WebElement email=getDriver().findElement(By.id("user_email"));
-        email.sendKeys(mail);
+        page.email.sendKeys(mail);
 
         String pass=faker.internet().password();
-        WebElement password=getDriver().findElement(By.id("password"));
-        password.sendKeys(pass);
+        page.password.sendKeys(pass);
 
         getDriver().switchTo().frame(0);
 
-        WebElement captcha= getDriver().findElement(By.cssSelector("div.recaptcha-checkbox-border"));
-        captcha.click();
+        //css tag (.) ve class value
+//        WebElement captcha= getDriver().findElement(By.cssSelector("div.recaptcha-checkbox-border"));
+        page.captcha.click();
         ReusableMethods.wait(10);
 
         getDriver().switchTo().defaultContent(); //ana pencereye geri doner
-        WebElement signup= getDriver().findElement(By.cssSelector("button#submitBTN"));
-        signup.click();
+        //css tag (.) ve id value
+        //WebElement signup= getDriver().findElement(By.cssSelector("button#submitBTN"));
+        page.signUp.click();
 
         closeDriver();
 
@@ -90,8 +87,7 @@ public class Selenium_TestNG_16_Faker_FileExist_Test {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         //download butonuna basti
-        WebElement download = getDriver().findElement(By.id("downloadButton"));
-        download.click();
+        page.download.click();
         ReusableMethods.wait(2);
 
         //"C:\Users\Hakan\Downloads\sampleFile.jpeg"
