@@ -1,6 +1,9 @@
 package testNG_Tests.test;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import testNG_Tests.pages.Selenium_TestNG_17_WebTables_Page;
@@ -10,6 +13,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static testNG_Tests.utilities.Driver.closeDriver;
 import static testNG_Tests.utilities.Driver.getDriver;
@@ -117,7 +121,6 @@ public class Selenium_TestNG_17_WebTables_Test {
 
         closeDriver();
     }
-
 
 
 }
