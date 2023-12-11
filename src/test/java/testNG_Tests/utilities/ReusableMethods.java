@@ -2,10 +2,7 @@ package testNG_Tests.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -126,5 +123,17 @@ public class ReusableMethods {
     public static void scrollToElementWithActions(WebDriver driver, WebElement element){
         Actions actions= new Actions(driver);
         actions.scrollToElement(element).perform();
+    }
+
+    /**
+     * herokuapp sitesindeki webtable dan istenen hucredeki datayi dondurur
+     * @param satir istenen satirin int cinsinden degeri girilir
+     * @param sutun istenen sutun un int cinsinden degeri girilir
+     * @return
+     */
+    public static String giveSpecificCell(int satir, int sutun){
+        WebElement specificCell= getDriver().findElement(By.xpath("//table[@id='table1']//tbody//tr["+satir+"]//td["+sutun+"]"));
+        String data= specificCell.getText();
+        return data;
     }
 }
