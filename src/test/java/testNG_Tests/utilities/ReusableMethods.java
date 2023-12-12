@@ -136,4 +136,67 @@ public class ReusableMethods {
         String data= specificCell.getText();
         return data;
     }
+    /**
+     * bu metot bir elemente javascript ile click yapar
+     * @param element yerine click yapilacak elementin locate i girilir
+     */
+    public static void clickByJavaScript(WebElement element){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("arguments[0].click();", element);
+    }
+
+    /**
+     * bu metot ile webelemente sendkey yapilir
+     * @param string yerine sendkey yapilacak text girilir
+     * @param element yerine de locate girilir
+     */
+    public static void sendKeyByJavascript(String string, WebElement element){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("arguments[0].value= '"+string+"';", element);
+    }
+    /**
+     * Tüm Sayfa ScreenShot parametreli
+     *
+     * @param name ekran goruntusune verilecek isim text olarak buraya girilmeli
+     * @return
+     */
+    public static String tumSayfaResmi(String name) {
+        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+        String dosyaYolu = "TestOutput/screenshot/screenshot" + tarih + name + ".png";
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        try {
+            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return tarih;
+    }
+
+    /**
+     * bu metot ile javascript kullanarak sayfanin en altina scroll yapilir
+     */
+
+    public static void scrollEndByJavascript(){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+    /**
+     * bu metot ile javascript kullanarak sayfanin en ustune scroll yapilir
+     */
+    public static void scrollTopByJavascript(){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
+    }
+
+    /**
+     * bu metot ile javascript kullanarak bir elementin degeri okunur ve string olarak bize doner
+     * @param idText bunun yerine degeri okunacak elementin id degeri text olarak verilir
+     * @param value yerine okunacak attribute verilir
+     * @return
+     */
+    public static String getValueByJavascript(String idText, String value){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        String getAttribute= javascriptExecutor.executeScript("return document.getElementById('"+idText+"')."+value).toString();
+        return getAttribute;
+    }
 }
