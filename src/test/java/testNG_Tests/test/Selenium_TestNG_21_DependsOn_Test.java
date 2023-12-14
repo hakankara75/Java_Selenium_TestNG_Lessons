@@ -47,8 +47,10 @@ public class Selenium_TestNG_21_DependsOn_Test {
 
     @Test(dependsOnMethods = "third")
     public void four() {
+        //ana sayfaya gelir ve duyurular linkini tiklar
         getDriver().navigate().back();
         getDriver().navigate().back();
+        //getDriver().get(ConfigReader.getProperty("kulturBakanligi"));
         page.duyurular.click();
         ReusableMethods.wait(2);
         closeDriver();
