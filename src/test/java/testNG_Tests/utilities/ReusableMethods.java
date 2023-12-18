@@ -20,12 +20,6 @@ import static testNG_Tests.utilities.Driver.getDriver;
 
 public class ReusableMethods {
 
-    @After
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().quit();
-
-    }
 
     public static void wait(int seconds) {
 
@@ -198,5 +192,25 @@ public class ReusableMethods {
         JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
         String getAttribute= javascriptExecutor.executeScript("return document.getElementById('"+idText+"')."+value).toString();
         return getAttribute;
+    }
+    /**
+     * bu metot dev tarafindan gizlenen elementin gorunur hale getirilmesi icindir
+     * @param element yerine gizlenen elementin locate verilir
+     */
+    public static void setElementVisible(WebElement element){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("arguments[0].style.opacity='1';", element);
+
+    }
+
+    /**
+     * bu metot ile elementin className degeri verilerek o classtaki text degeri aliniyor
+     * @param className olarak text degeri alinmak istenen elementin ismi className degeri verilir
+     * @return bu metot elementin textini return eder
+     */
+    public static String getTextWithJavaScript(String className){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) getDriver();
+        String  text= (String) javascriptExecutor.executeScript("return arguments[0].textContent;", className);
+        return text;
     }
 }

@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import testNG_Tests.pages.Selenium_TestNG_22_SoftAssertion_Page;
 import testNG_Tests.utilities.ConfigReader;
+import testNG_Tests.utilities.ReusableMethods;
 
 import java.time.Duration;
 
@@ -46,7 +47,7 @@ public class Selenium_TestNG_22_SoftAssertion_Test {
 
         //assertAll ile bitir. Tum kodlar burada dogrulanacak.
         softAssert.assertAll();
-        closeDriver();
+
 
     }
 }

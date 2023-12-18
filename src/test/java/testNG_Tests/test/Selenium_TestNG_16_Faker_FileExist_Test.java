@@ -100,7 +100,7 @@ public class Selenium_TestNG_16_Faker_FileExist_Test {
         boolean isExist2= Files.exists(Paths.get(dosyaYolu2));
         System.out.println("isExist2 = " + isExist2);
 
-        closeDriver();
+       
 
     }
 }
