@@ -16,7 +16,7 @@ public class Selenium_TestNG_16_Faker_FileExist_Page {
     @FindBy(id="password")
     public WebElement password;
     @FindBy(id="user_email")
-    public WebElement email;
+    public WebElement userEmail;
     @FindBy(id="phone")
     public WebElement phone;
     @FindBy(id="firstname")
@@ -31,5 +31,21 @@ public class Selenium_TestNG_16_Faker_FileExist_Page {
     public WebElement country;
     @FindBy(id="downloadButton")
     public WebElement download;
+    @FindBy(id = "register.firstName")
+    public WebElement ad;
+    @FindBy(id = "register.lastName")
+    public WebElement soyad;
+    @FindBy(id = "register.email")
+    public WebElement email;
 
+    @FindBy(id = "register.mobileNumber")
+    public WebElement cepTelefonu;
+    @FindBy(id = "password")
+    public WebElement sifre;
+    @FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
+    public WebElement reCaptcha;
+    @FindBy(css = "div[class='signup_button']")
+    public WebElement signUpButton;
+    @FindBy(id="uploadFile")
+    public WebElement dosyaSec;
 }

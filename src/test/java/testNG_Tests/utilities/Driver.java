@@ -40,6 +40,14 @@ Bunun icin class default constructor private yapildi.
                     options.addArguments("--headless"); // Headless test yapmak icin
                     options.addArguments("--disaple-gpu"); //GPU kullanimini devre disi birakir
                     //driver= new ChromeDriver(options); //bu kodu headless testte acarsinizi
+
+                    //asagidaki kodlar file download yaparken default deger olan download klasoru yerine bir yol vermemize yarar
+//                    ChromeOptions options = new ChromeOptions();
+//                    String filePath ="C:\\Hakan Arsiv";
+//                    Map<String, Object> prefs = new HashMap<>();
+//                    prefs.put("download.default_directory", filePath);
+//                    options.setExperimentalOption("prefs", prefs);
+                    //  driver = new ChromeDriver(options);  //bu satirdaki yorum slashlarini bir alt satira indirip calistirmaliyiz.
                     driver=new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
                 case "edge":

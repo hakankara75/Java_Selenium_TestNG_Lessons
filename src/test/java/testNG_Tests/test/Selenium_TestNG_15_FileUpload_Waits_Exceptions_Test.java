@@ -27,7 +27,7 @@ public class Selenium_TestNG_15_FileUpload_Waits_Exceptions_Test {
 try {
     page.dosyaSec.click();
 }catch (Exception e) {
-    page.dosyaSec.sendKeys(System.getProperty("user.home", "/Desktop/deneme.docx"));
+    page.dosyaSec.sendKeys(System.getProperty("user.home")+ "/Desktop/deneme.docx");
 
 
 }
