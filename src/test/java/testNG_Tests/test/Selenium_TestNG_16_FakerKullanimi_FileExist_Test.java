@@ -141,6 +141,7 @@ public class Selenium_TestNG_16_FakerKullanimi_FileExist_Test {
         }
         ReusableMethods.wait(2);
         closeDriver();
+
     }
 
     @Test
