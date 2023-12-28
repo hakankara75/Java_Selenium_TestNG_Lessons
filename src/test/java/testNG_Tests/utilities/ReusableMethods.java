@@ -213,4 +213,23 @@ public class ReusableMethods {
         String  text= (String) javascriptExecutor.executeScript("return arguments[0].textContent;", className);
         return text;
     }
+    /**
+     * bu metot ile bir elementin value'suna deger atanir.
+     * @param element deger atanacak elementin locate verilmeli
+     * @param text elemente gönderilecek value verilmeli
+     */
+    public static void sendAttributeJS(String text, WebElement element){
+        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) Driver.getDriver();
+        javascriptExecutor.executeScript("arguments[0].setAttribute('value', '"+text+"')", element);
+    }
+    /**
+     * bu metot ile javascript kullanarak bir elemente sendKey yapılır
+     * @param element sendKey yapılacak elementin locate verilmeli
+     * @param text elemente gönderilecek değer verilmeli
+     */
+    public static void sendKeysJS(WebElement element, String text) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].value='" + text + "'", element);
+
+    }
 }
