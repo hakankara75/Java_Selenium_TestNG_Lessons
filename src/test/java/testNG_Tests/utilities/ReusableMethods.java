@@ -232,4 +232,12 @@ public class ReusableMethods {
         js.executeScript("arguments[0].value='" + text + "'", element);
 
     }
+    /**
+     bu metot ile mause element ustunde bekletilir
+     @param webElement girilmesi gereken locate dir
+     */
+    public static void moveToElement(WebElement webElement) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(webElement).perform();
+    }
 }

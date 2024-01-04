@@ -116,7 +116,7 @@ public class ExcelUtils {
         return data;
     }
 
-    public static void excellSayfaAdiVerme(String sayfaAdi, String dosyaYolu) throws IOException {
+    public static void excellSayfaAdiVerme(String dosyaYolu, String sayfaAdi) throws IOException {
 
 
                FileInputStream inputStream = new FileInputStream(new File(dosyaYolu));
