@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Belirli Classlar Testi">
+    <test verbose="2" preserve-order="true"
+          name="1.class">
+        <classes>
+            <class name="testNG_Tests.test.Selenium_TestNG_16_FakerKullanimi_FileExist_Test">
+                <methods>
+                    <include name="faker"/>
+                    <include name="faker2"/>
+                    <include name="existFile"/>
+                    <include name="existFile2"/>
+                    <include name="existFile3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="2. class">
+        <classes>
+            <class name="testNG_Tests.test.Selenium_TestNG_22_SoftAssertion_Test">
+                <methods>
+                    <include name="softAssertion"/>
+                    <include name="hardAssertions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="3.class">
+        <classes>
+            <class name="testNG_Tests.test.Selenium_TestNG_24_Excel_Test">
+                <methods>
+                    <include name="positive"/>
+                    <include name="negative"/>
+                    <include name="writeToExcel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="4.class">
+        <classes>
+            <class name="testNG_Tests.test.Selenium_TestNG_15_FileUpload_Waits_Exceptions_Test">
+                <methods>
+                    <include name="fileUpload"/>
+                    <include name="waits"/>
+                    <include name="wait2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

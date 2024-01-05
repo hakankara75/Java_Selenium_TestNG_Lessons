@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="Regression1"   >
+            <groups>
+                <run>
+                   <!-- exclude hariç tutulacak testler içindir. name kısmına girilecek value @Test metotları başına yazılısa o testler koşulmaz -->
+                    <exclude name="brokenTests"  />
+                    <!-- include run edilecek testler içindir. name kısmına girilecek value @Test metotları başına yazılısa o testler koşulur -->
+                    <include name="SelectedTests"  />
+                    <!-- SelectedTests valuesunu belirliClasslar package altında 16-22 ve 24. classlarda bazı testlere koydum-->
+
+                </run>
+            </groups>
+
+        <packages>
+            <package name="testNG_Tests.test.belirliClasslar.*" />
+        </packages>
+    </test>
+</suite>

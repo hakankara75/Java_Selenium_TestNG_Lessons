@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Test 1">
+        <classes>
+            <class name="testNG_Tests.test.belirliClasslar.Selenium_TestNG_16_FakerKullanimi_FileExist_Test">
+                <methods>
+                    <include name="faker"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Test 2">
+        <classes>
+            <class name="testNG_Tests.test.belirliClasslar.Selenium_TestNG_22_SoftAssertion_Test">
+                <methods>
+                    <include name="hardAssertions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Test 3">
+        <classes>
+            <class name="testNG_Tests.test.belirliClasslar.Selenium_TestNG_24_Excel_Test">
+                <methods>
+                    <include name="positive"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
