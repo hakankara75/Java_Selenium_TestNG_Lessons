@@ -15,6 +15,16 @@ https://testng.org/doc/documentation-main.html#testng-xml sitesine gideriz
 "You can also specify groups and methods to be included and excluded:" kısmındaki kodları
 bir araya getireceğim.
 
+PARALLEL TEST
+Birden fazla testin aynı anda birden fazla browser açılarak koşulmasıdır.
+Böylelik test run süresi kısalmış.
+
+TestNG frameworkunde Driver class singleton pattern olduğundan dolayı paralel testte kullanılamaz
+bu nedenle Junit deki gibi her bir test metodu içinde driver objesi oluşturulur
+
+paralel test class seviyesinde yapılacaksa package seçilip xml dosyası açılır
+paralel test test seviyesinde yapılacaksa classlar seçilip xml dosyası açılır
+
  */
 
 }
