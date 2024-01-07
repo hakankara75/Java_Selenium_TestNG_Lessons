@@ -1,4 +1,4 @@
-package testNG_Tests.test.paraleltests;
+package testNG_Tests.test.paraleltest;
 
 
 import com.github.javafaker.Faker;

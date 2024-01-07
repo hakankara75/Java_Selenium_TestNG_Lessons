@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="4">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/paraleltest/ParalelTest_01.java">
+        <classes>
+            <class name="testNG_Tests.test.paraleltest.ParalelTest_01">
+                <methods>
+                    <include name="kitapYurdu"/>
+                    <include name="faker"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/paraleltest/ParalelTest_02.java">
+        <classes>
+            <class name="testNG_Tests.test.paraleltest.ParalelTest_02">
+                <methods>
+                    <include name="test"/>
+                    <include name="softAssert"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/paraleltest/ParalelTest_011.java">
+        <classes>
+            <class name="testNG_Tests.test.paraleltest.ParalelTest_011">
+                <methods>
+                    <include name="kitapYurdu"/>
+                    <include name="faker"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/paraleltest/ParalelTest_022.java">
+        <classes>
+            <class name="testNG_Tests.test.paraleltest.ParalelTest_022">
+                <methods>
+                    <include name="test"/>
+                    <include name="softAssert"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

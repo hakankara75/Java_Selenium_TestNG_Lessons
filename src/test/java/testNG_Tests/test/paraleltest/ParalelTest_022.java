@@ -1,4 +1,4 @@
-package testNG_Tests.test.paraleltests;
+package testNG_Tests.test.paraleltest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,8 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import java.time.Duration;
 import testNG_Tests.utilities.ConfigReader;
+
+import java.time.Duration;
+
 
 public class ParalelTest_022 {
 

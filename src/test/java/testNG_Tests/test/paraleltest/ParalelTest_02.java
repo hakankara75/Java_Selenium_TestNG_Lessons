@@ -1,4 +1,4 @@
-package testNG_Tests.test.paraleltests;
+package testNG_Tests.test.paraleltest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

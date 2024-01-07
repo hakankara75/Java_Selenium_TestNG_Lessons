@@ -1,4 +1,4 @@
-package testNG_Tests.test.paraleltests;
+package testNG_Tests.test.paraleltest;
 
 
 import com.github.javafaker.Faker;
@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import testNG_Tests.pages.Selenium_TestNG_16_Faker_FileExist_Page;
 import testNG_Tests.utilities.ConfigReader;
+
 
 import java.time.Duration;
 

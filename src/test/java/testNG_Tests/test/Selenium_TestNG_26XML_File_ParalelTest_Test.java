@@ -16,15 +16,24 @@ https://testng.org/doc/documentation-main.html#testng-xml sitesine gideriz
 bir araya getireceğim.
 
 PARALLEL TEST
-Birden fazla testin aynı anda birden fazla browser açılarak koşulmasıdır.
-Böylelik test run süresi kısalmış.
+Birden fazla browser açarak testleri run etmeye denir.
+Zamanda tasarruf için parallel test koşulur.
+1- Class seviyesinde koşmak için package seçilir.
+xml dosyası oluşturulur.
+xml dosyası içine ayar yapılır.
 
-TestNG frameworkunde Driver class singleton pattern olduğundan dolayı paralel testte kullanılamaz
-bu nedenle Junit deki gibi her bir test metodu içinde driver objesi oluşturulur
+2- methods seviyesinde koşmak için package seçilir.
+xml dosyası oluşturulur.
+xml dosyası içine ayar yapılır.
 
-paralel test class seviyesinde yapılacaksa package seçilip xml dosyası açılır
-paralel test test seviyesinde yapılacaksa classlar seçilip xml dosyası açılır
+3- tests seviyesinde koşmak için koşulacak classlar toplu olarak seçilir.
+üzerinde sağ klik yapıp xml dosyası oluşturulur.
+xml dosyası içine ayar yapılır.
 
+4- koşulacak testler junitdeki gibi kendi içinde driver objesi oluşturulur.
+çünkü testng Driver class'tan method import ederek kullanır.
+Driver class da singelton pattern olduğu için ilk açılan browser driveri kullanır.
+diğer açılan 3 browser kullanamayacağı için hata verir.
  */
 
 }
