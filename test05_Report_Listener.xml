@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/listeners/Test05.java">
+        <classes>
+            <class name="testNG_Tests.test.listeners.Test05">
+                <methods>
+                    <include name="testName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

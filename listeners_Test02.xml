@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="testNG_Tests.utilities.Listeners"/>
+    </listeners>
+
+
+
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Hakan/IdeaProjects/Java_Selenium_TestNG_Lesson/src/test/java/testNG_Tests/test/listeners/Test02.java">
+        <classes>
+            <class name="testNG_Tests.test.listeners.Test02">
+                <methods>
+                    <include name="pass"/>
+                    <include name="fail"/>
+                    <include name="skipTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
