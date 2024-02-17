@@ -1,5 +1,9 @@
 package testNG_Tests.test;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,21 +28,25 @@ public class Selenium_TestNG_17_WebTables_Test {
     Selenium_TestNG_17_WebTables_Page page= new Selenium_TestNG_17_WebTables_Page();
 
     @Test
+    @Description("Bu testte webtablosundan data almak kontrol edilecek")
+    @Severity(SeverityLevel.MINOR)
     public void webTable() {
 
                 /*
     kullanici https://the-internet.herokuapp.com/tables sitesine gider
     kullanici example 1 tablosunu satir satir yazdirir
      */
-
+        Allure.step("kullanici https://the-internet.herokuapp.com/tables sitesine gider");
         // kullanici https://the-internet.herokuapp.com/tables sitesine gider
         getDriver().get(ConfigReader.getProperty("webTables"));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
+        Allure.step("kullanici https://the-internet.herokuapp.com/tables sitesine gider");
         //kullanici example 1 tablosunu satir satir yazdirir
         String example1Text=page.example1.getText();
         System.out.println("example1Text = " + example1Text);
 
+        Allure.step("driver kapatildi");
         closeDriver();
 
     }
