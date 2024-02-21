@@ -1,11 +1,14 @@
 package testNG_Tests.utilities;
 
+import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import testNG_Tests.test.Selenium_TestNG_20_Log4J_Test;
 
 public class Listeners implements ITestListener {
 
@@ -21,11 +24,11 @@ public class Listeners implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
+    public void onTestFailure(ITestResult iTestResult) {
         System.out.println("onTestFailure() hatalı (fail) @Testten sonra çalışır");
-        System.out.println(result.getName());
-        System.out.println(result.getTestClass());
-        final Logger logger= LogManager.getLogger(result.getTestClass().getName());
+        System.out.println(iTestResult.getName());
+        System.out.println(iTestResult.getTestClass());
+        final Logger logger= LogManager.getLogger(iTestResult.getTestClass().getName());
         logger.trace("trace seviyesi");
         logger.debug("debug seviyesi");
         logger.info("info seviyesi");
@@ -33,6 +36,7 @@ public class Listeners implements ITestListener {
         logger.error("error seviyesi");
         logger.fatal("fatal seviyesi");
         ReusableMethods.tumSayfaScreenShoot();
+
     }
 
     @Override
