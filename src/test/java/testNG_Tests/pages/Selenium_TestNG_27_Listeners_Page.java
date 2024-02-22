@@ -29,6 +29,6 @@ public class Selenium_TestNG_27_Listeners_Page {
     public WebElement email;
     @FindBy(id="input-password")
     public WebElement password;
-    @FindBy(css="input[type='password']")
+    @FindBy(css="input[type='submit']")
     public WebElement loginButton;
 }
