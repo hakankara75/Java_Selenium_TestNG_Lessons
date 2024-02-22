@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="3 Testi XML file ile kosturma">
+        <groups>
+                <run>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </run>
+        </groups>
+
+        <classes>
+            <class name="testNG_Tests.test.xmlFile_Group.xmlFile_Group"/>
+        </classes>
+    </test>
+</suite>

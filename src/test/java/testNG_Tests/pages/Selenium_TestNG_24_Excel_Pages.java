@@ -25,4 +25,10 @@ public class Selenium_TestNG_24_Excel_Pages {
     public List<WebElement> yayinEvleri;
     @FindBy(xpath="//div[@class='name ellipsis']")
     public List<WebElement> kitapIsimleri;
+    @FindBy(id="input-email")
+    public WebElement emailLambda;
+    @FindBy(id="input-password")
+    public WebElement passwordLambda;
+    @FindBy(xpath="//input[@type='submit']")
+    public WebElement loginLambda;
 }

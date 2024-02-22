@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-22T14:51:47 TRT" name="All Test Suite" finished-at="2024-02-22T14:51:48 TRT" duration-ms="1315">
+    <groups>
+      <group name="test2">
+        <method signature="xmlFile_Group.testName2()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" name="testName2" class="testNG_Tests.test.xmlFile_Group.xmlFile_Group"/>
+      </group> <!-- test2 -->
+      <group name="test3">
+        <method signature="xmlFile_Group.testName3()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" name="testName3" class="testNG_Tests.test.xmlFile_Group.xmlFile_Group"/>
+      </group> <!-- test3 -->
+      <group name="test1">
+        <method signature="xmlFile_Group.testName1()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" name="testName1" class="testNG_Tests.test.xmlFile_Group.xmlFile_Group"/>
+      </group> <!-- test1 -->
+    </groups>
+    <test started-at="2024-02-22T14:51:47 TRT" name="3 Testi XML file ile kosturma" finished-at="2024-02-22T14:51:48 TRT" duration-ms="1315">
+      <class name="testNG_Tests.test.xmlFile_Group.xmlFile_Group">
+        <test-method signature="testName1()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" started-at="2024-02-22T14:51:47 TRT" name="testName1" finished-at="2024-02-22T14:51:48 TRT" duration-ms="1300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName1 -->
+        <test-method signature="testName2()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" started-at="2024-02-22T14:51:48 TRT" name="testName2" finished-at="2024-02-22T14:51:48 TRT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName2 -->
+        <test-method signature="testName3()[pri:0, instance:testNG_Tests.test.xmlFile_Group.xmlFile_Group@702ab027]" started-at="2024-02-22T14:51:48 TRT" name="testName3" finished-at="2024-02-22T14:51:48 TRT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testName3 -->
+      </class> <!-- testNG_Tests.test.xmlFile_Group.xmlFile_Group -->
+    </test> <!-- 3 Testi XML file ile kosturma -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
