@@ -9,8 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <allure.version>2.19.0</allure.version>
+        <aspectj.version>1.9.21</aspectj.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -20,9 +22,14 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.15.0</version>
+            <version>4.8.3</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v121 -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v121</artifactId>
+            <version>4.17.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -35,33 +42,17 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.8.0</version>
+            <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
 
-        <!--Microsoft Office belgeleriyle (Word, Excel, PowerPoint) çalışmak için kullanılır -->
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.2.3</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-
-        <!-- eski nesil office dosyalari icin -->
+             <!-- eski nesil office dosyalari icin -->
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.0.0</version>
         </dependency>
-
         <!-- yeni nesil office dosyalari icin -->
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
@@ -69,7 +60,12 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.0.0</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.1</version>
+        </dependency>
         <!-- log4J 1.0 destegi saglar -->
         <!-- https://mvnrepository.com/artifact/log4j/log4j -->
         <dependency>
@@ -85,16 +81,85 @@
             <version>2.22.0</version>
         </dependency>
 
+        <!--Extent Report icin -->
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.9</version>
+        </dependency>
+
+        <!-- Fluent-style assert icin -->
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Allure report için -->
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.24.0</version>
+            <version>${allure.version}</version>
         </dependency>
+        <!-- Allure report için -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-bom</artifactId>
+            <version>${allure.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+
+
 
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <argLine>
+                        -Dfile.encoding=${project.build.sourceEncoding}
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.12.0</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.0</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

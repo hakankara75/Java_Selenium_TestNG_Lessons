@@ -25,4 +25,10 @@ public class Selenium_TestNG_27_Listeners_Page {
     public WebElement konusanKitaplik;
     @FindBy(xpath="//h4[@class='title mb-2']")
     public WebElement title;
+    @FindBy(id="input-email")
+    public WebElement email;
+    @FindBy(id="input-password")
+    public WebElement password;
+    @FindBy(css="input[type='password']")
+    public WebElement loginButton;
 }

@@ -1,5 +1,6 @@
 package testNG_Tests.utilities;
 
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.openqa.selenium.*;
@@ -19,7 +20,6 @@ import static org.junit.Assert.assertTrue;
 import static testNG_Tests.utilities.Driver.getDriver;
 
 public class ReusableMethods {
-
 
     public static void wait(int seconds) {
 
@@ -239,5 +239,19 @@ public class ReusableMethods {
     public static void moveToElement(WebElement webElement) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(webElement).perform();
+    }
+    /**
+     * bu metot ile allure reporta screenshot eklenir
+     * @return
+     */
+    public static File addScreenshotToAllureReport(){
+        File screenshotAs = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+        try {
+            Allure.addAttachment("Screenshot", FileUtils.openInputStream(screenshotAs));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Reusable Class icindeki addScreenshotToAllureReport() ile ekran goruntusu eklendi");
+        return screenshotAs;
     }
 }
