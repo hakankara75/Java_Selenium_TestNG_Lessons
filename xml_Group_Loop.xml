@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="XML File ile loop halinde group test">
+
+        <groups>
+            <run>
+                <include name="group1"/>
+                <include name="group2"/>
+                <include name="group3"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNG_Tests.test.xmlFile_Group_Loop.Group"/>
+        </classes>
+    </test>
+</suite>

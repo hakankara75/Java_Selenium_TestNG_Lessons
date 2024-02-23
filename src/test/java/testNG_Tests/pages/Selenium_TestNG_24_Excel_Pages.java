@@ -29,6 +29,6 @@ public class Selenium_TestNG_24_Excel_Pages {
     public WebElement emailLambda;
     @FindBy(id="input-password")
     public WebElement passwordLambda;
-    @FindBy(xpath="//input[@type='submit']")
+    @FindBy(css="input[type='submit']")
     public WebElement loginLambda;
 }

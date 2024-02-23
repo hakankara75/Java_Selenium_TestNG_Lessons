@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
-                    <span>C:\Users\Hakan\IdeaProjects\Java_Selenium_TestNG_Lesson\xmlFile_Gorup.xml</span>
+                    <span>C:\Users\Hakan\IdeaProjects\Java_Selenium_TestNG_Lesson\xml_Group_Loop.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,17 +103,17 @@
                     <div class="method-list-content passed suite-All_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group.xmlFile_Group" class="method navigator-link" hash-for-method="testName1">testName1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group_Loop.Group" class="method navigator-link" hash-for-method="testName1">testName1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group.xmlFile_Group" class="method navigator-link" hash-for-method="testName2">testName2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group_Loop.Group" class="method navigator-link" hash-for-method="testName2">testName2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group.xmlFile_Group" class="method navigator-link" hash-for-method="testName3">testName3</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testNG_Tests.test.xmlFile_Group_Loop.Group" class="method navigator-link" hash-for-method="testName3">testName3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -131,7 +131,7 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNG_Tests.test.xmlFile_Group.xmlFile_Group</span>
+              <span class="class-name">testNG_Tests.test.xmlFile_Group_Loop.Group</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -160,25 +160,25 @@
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Hakan\IdeaProjects\Java_Selenium_TestNG_Lesson\xmlFile_Gorup.xml</span>
+            <span class="header-content">C:\Users\Hakan\IdeaProjects\Java_Selenium_TestNG_Lesson\xml_Group_Loop.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;3 Testi XML file ile kosturma&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;XML File ile loop halinde group test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;test1&quot;/&gt;
-        &lt;include name=&quot;test2&quot;/&gt;
-        &lt;include name=&quot;test3&quot;/&gt;
+        &lt;include name=&quot;group1&quot;/&gt;
+        &lt;include name=&quot;group2&quot;/&gt;
+        &lt;include name=&quot;group3&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG_Tests.test.xmlFile_Group.xmlFile_Group&quot;/&gt;
+      &lt;class name=&quot;testNG_Tests.test.xmlFile_Group_Loop.Group&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- 3 Testi XML file ile kosturma --&gt;
+  &lt;/test&gt; &lt;!-- XML File ile loop halinde group test --&gt;
 &lt;/suite&gt; &lt;!-- All Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,7 +190,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">3 Testi XML file ile kosturma (1 class)</span>
+                <span class="test-name">XML File ile loop halinde group test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,7 +201,7 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">test1</span>
+              <span class="test-group-name">group1</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">testName1</span>
@@ -209,7 +209,7 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">test2</span>
+              <span class="test-group-name">group2</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">testName2</span>
@@ -217,7 +217,7 @@
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">test3</span>
+              <span class="test-group-name">group3</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">testName3</span>
@@ -243,21 +243,21 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testName1')
-data.setCell(0, 2, 'testNG_Tests.test.xmlFile_Group.xmlFile_Group')
-data.setCell(0, 3, 1300);
+data.setCell(0, 2, 'testNG_Tests.test.xmlFile_Group_Loop.Group')
+data.setCell(0, 3, 2613);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testName2')
-data.setCell(1, 2, 'testNG_Tests.test.xmlFile_Group.xmlFile_Group')
-data.setCell(1, 3, 2);
+data.setCell(1, 1, 'testName3')
+data.setCell(1, 2, 'testNG_Tests.test.xmlFile_Group_Loop.Group')
+data.setCell(1, 3, 303);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testName3')
-data.setCell(2, 2, 'testNG_Tests.test.xmlFile_Group.xmlFile_Group')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'testName2')
+data.setCell(2, 2, 'testNG_Tests.test.xmlFile_Group_Loop.Group')
+data.setCell(2, 3, 2);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -276,9 +276,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testNG_Tests.test.xmlFile_Group.xmlFile_Group</span>
+              <span class="ignored-class-name">testNG_Tests.test.xmlFile_Group_Loop.Group</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testName</span>
+                <span class="ignored-method-name">loopMethod</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -290,18 +290,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG_Tests.test.xmlFile_Group.xmlFile_Group</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testNG_Tests.test.xmlFile_Group_Loop.Group</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testName1</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testName2</span>
-                <span class="method-start">1307 ms</span>
+                <span class="method-start">2620 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testName3</span>
-                <span class="method-start">1311 ms</span>
+                <span class="method-start">2626 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
