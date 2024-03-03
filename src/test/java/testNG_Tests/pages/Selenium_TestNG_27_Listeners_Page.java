@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testNG_Tests.utilities.Driver;
 
+import java.util.List;
+
 public class Selenium_TestNG_27_Listeners_Page {
 
     public Selenium_TestNG_27_Listeners_Page(){
@@ -31,4 +33,8 @@ public class Selenium_TestNG_27_Listeners_Page {
     public WebElement password;
     @FindBy(css="input[type='submit']")
     public WebElement loginButton;
+    @FindBy(css="a[href='/dynamic_content?with_content=static']")
+    public WebElement clickHere;
+    @FindBy(xpath="//img[contains(@src,'/img/avatars/Original')]")
+    public List<WebElement> images;
 }
