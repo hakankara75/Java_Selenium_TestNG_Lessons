@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -253,5 +254,25 @@ public class ReusableMethods {
         }
         System.out.println("Reusable Class icindeki addScreenshotToAllureReport() ile ekran goruntusu eklendi");
         return screenshotAs;
+    }
+
+    public static boolean compareImage(BufferedImage image1, BufferedImage image2){
+        if(image1.getWidth()!= image2.getWidth() || image1.getHeight()!= image2.getHeight()){
+            System.out.println("İki resmin boyutları farklı");
+            return false;
+        }
+
+        for (int y=0; y< image1.getHeight();y++){
+            for (int x=0; x< image1.getWidth();x++){
+                int pixel1= image1.getRGB(x,y);
+                int pixel2= image2.getRGB(x,y);
+                if (pixel1 != pixel2){
+                    System.out.println("İki resmin pixelleri farklı");
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
