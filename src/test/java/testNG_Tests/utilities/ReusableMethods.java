@@ -1,5 +1,8 @@
 package testNG_Tests.utilities;
 
+import com.github.pemistahl.lingua.api.Language;
+import com.github.pemistahl.lingua.api.LanguageDetector;
+import com.github.pemistahl.lingua.api.LanguageDetectorBuilder;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
@@ -274,5 +277,14 @@ public class ReusableMethods {
         }
 
         return true;
+    }
+    public static String getLanguage(String string){
+        LanguageDetector detector= LanguageDetectorBuilder
+                .fromLanguages(Language.ENGLISH, Language.FRENCH, Language.GERMAN, Language.SPANISH, Language.TURKISH)
+                .withMinimumRelativeDistance(0.1).build();
+
+        Language detectLanguage = detector.detectLanguageOf(string);
+        return detectLanguage.name();
+
     }
 }

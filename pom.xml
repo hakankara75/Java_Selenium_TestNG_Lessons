@@ -112,9 +112,13 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-
-
-
+        <!-- Frontend de bulunan textlerin hangi dilde oldugunu dogrulamak icin -->
+        <!-- https://mvnrepository.com/artifact/com.github.pemistahl/lingua -->
+        <dependency>
+            <groupId>com.github.pemistahl</groupId>
+            <artifactId>lingua</artifactId>
+            <version>1.2.1</version>
+        </dependency>
 
 
     </dependencies>
