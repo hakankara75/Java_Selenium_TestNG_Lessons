@@ -278,6 +278,11 @@ public class ReusableMethods {
 
         return true;
     }
+    /**
+     * bu metot bir sayfadaki texti alıp tanımlanan 5 dilden hangisi olduğunu sorgular ve sonuç döner
+     * @param string dilin ne olduğunu döner
+     * @return
+     */
     public static String getLanguage(String string){
         LanguageDetector detector= LanguageDetectorBuilder
                 .fromLanguages(Language.ENGLISH, Language.FRENCH, Language.GERMAN, Language.SPANISH, Language.TURKISH)
