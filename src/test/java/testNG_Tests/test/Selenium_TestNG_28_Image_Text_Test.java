@@ -109,7 +109,6 @@ public class Selenium_TestNG_28_Image_Text_Test {
             throw new RuntimeException(e);
         }
 
-
         //bilgisayardan resmin okunup BufferedImage yapilmasi
         BufferedImage expectedImage;
 
